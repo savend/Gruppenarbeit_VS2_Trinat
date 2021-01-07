@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <title>WEB1-Praktikum 2 &middot; Registrierung</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body id="page_register">
+  
+  <header>
+    <h1>Registrierung</h1>
+  </header>
+  
+  <nav>
+    <ul>
+      <li id="navi_get-post"><a href="get-post.html">GET vs POST</a></li>
+      <li id="navi_register"><a href="register.html">Registrierung</a></li>
+      <li id="navi_html5"><a href="html5.html">HTML5</a></li>
+    </ul>
+  </nav>
+  
+  <main>
+    <h2>Registrierung</h2>
+    <form action="https://postman-echo.com/post" method="post">
+        <fieldset>
+            <legend>Logindaten</legend>
+            <label for="login">Benutzername:</label>
+            <input type="text" id="login" name="login"/>
+            <label for="password">Passwort:</label>
+            <input type="password" id="password" name="password"/>
+            <label for="pwdconfirm">Best&auml;tigen:</label>
+            <input type="password" id="pwdconfirm" name="pwdconfirm"/>
+        </fieldset>
+        <fieldset>
+            <legend>Benutzerdaten</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" />
+            <label for="email">E-Mail:</label>
+            <input type="text" id="email" name="email" />
+            <label for="birthday">Geburtstag:</label>
+            <input type="text" id="birthday" name="birthday" />
+            <fieldset class="radiocheckgroup">
+              <legend><span>Geschlecht:</span></legend>
+              <div>
+			  <input type="radio" name="gender" id="gender_m" value="männlich"/>
+			  <label for="gender_m">Männlich</label>
+			  </div>
+			  <div>
+			  <input type="radio" name="gender" id="gender_w" value="weiblich"/>
+			  <label for="gender_w">Weiblich</label>
+			  </div>
+            </fieldset>
+            <label for="kurs-select">Kurse:</label>
+			<select name="Kurs" id="kurs-select" multiple size="4">
+				<option value="">--Please choose at least one option--</option>
+				<option value="C/C++">C++</option>
+				<option value="Arduino">Arduino</option>
+				<option value="Java">Java</option>
+				<option value="Matlab">Matlab</option>
+				<option value="Html/Css">Html/Css</option>
+			</select>
+            <label for="comment">Kommentar:</label>
+            <textarea id="comment" name="comment" rows="3" cols="30"></textarea>
+            <label for="submit"></label>
+            <input type="submit" id="submit" name="submit" value="Registrieren" />
+			<label for="hidden_txt"></label>
+			<input type="hidden" id="hidden_txt" name="hidden_content" value="MYSTERY BOX">
+		</fieldset>
+    </form>
+  </main>
+
+</body>
+</html>
