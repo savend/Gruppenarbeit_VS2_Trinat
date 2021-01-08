@@ -1,0 +1,45 @@
+Aufgabe 1
+
+a)
+Beim Starten der KLasse "SehrEinfacherChatServer" startet der Server und wartet bis einer der CLients den Chat betritt. 
+Mit dem ClientHandler wird ein neuer Client erstellt wenn dieser sich mit der Methode "netzwerkEinrichten" einloggt (passiert beim Starten der Client Klasse)
+der CLient mit dem "PrintWriter" kann nur schreiben. Client mit dem "InputStreamReader" kann den Chat verlauf nachvollziehen. 
+Der Server sieht jede Nachricht welche im Chat geschrieben wird und weiss wenn sich neue Clients einloggen und ausloggen.
+
+b)
+Über die Funktion esAllenWeitersagen. Jedoch fehlt hier nach unsere Meinung eine Möglichkeit seinen Input einzugeben.
+
+
+
+
+
+Aufgabe 2
+
+a)
+Im Main wird eine neuer ServerSocket initiert. Dadurch wird der "HanlderRequest" aufgerufen. Dieser HandlerRequest
+generiert auf dem Port die Webseite und stellt die Verbindung her. Durch einen HTML text wird das Desgin der Webseite generiert.
+Durch die Funktion "getCurrentTimeStamp" wird die aktuelle Zugriffszeit abgefragt und auf der Webseite eingefügt. Parallel zu dem 
+gibt das Programm im Terminal an wann eine neu Verbindung aufgebaut wurde.
+
+b)
+Im "main" wird ein Socket initiert und dieser Ruft den HandlerRequest auf. Durch "socket connection = socket.accept()" wird die 
+Webseite dem Port übergeben. Der HandlerRequest wandelt die Informationen in eine für den Browser verständlichen variante um.
+
+
+Aufgabe 3
+
+a)
+index.html organisiert wie die Webseite aussieht.
+
+
+
+b)
+Jedes Mal wenn auf der Webseite die Seite gewechselt wird (von index zu Page2) wird dieses printed. 
+Es wird immer ein neuer Thread eröffnet und nach abschluss wieder geschlossen.
+
+c)
+Das Bild wird über die page2.html geladen. Mit dem Code : <img src="katzenbild.jpg"></img> kann das Bild, welches sich im gleichen Ordner befinden muss, in die Webseite eingfügt werden.
+
+d)
+Jedes Mal wenn etwas auf der Webseite aufgerufen wurde, z.B. Page Contact, wird ein neuer Call gemacht welcher einen Thread aufruft. 
+In der Console wird dies mit "Incoming Call..." angezeigt. Darauf folgt der Thread welcher aufgerufen wurde. (BrowserClientThread und ArrayIndexOutOfBoundsException)
